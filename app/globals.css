@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 205 76% 14%;
+
+    --primary: 205 76% 14%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 268 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --accent: 12 91% 53%;
+    --accent-foreground: 0 0% 100%;
+
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 30%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 205 76% 14% / 0.12;
+    --input: 205 76% 14% / 0.12;
+    --ring: 268 100% 60% / 0.4;
+
+    --radius: 0.9rem;
+
+    --mito-blue: #052941;
+    --mito-purple: #883AFF;
+    --mito-orange: #F2461D;
+    --mito-yellow: #FFC401;
+
+    /* Refined neutrals for premium white sections */
+    --ink-900: #052941;
+    --ink-700: #0c3a55;
+    --ink-500: #2f4d63;
+    --ink-400: #5a6f80;
+    --ink-300: #93a3af;
+    --paper: #ffffff;
+    --paper-2: #fafaf7;
+    --paper-3: #f3f3ee;
+  }
+
+  .dark {
+    --background: 205 76% 14%;
+    --foreground: 0 0% 100%;
+    --primary: 0 0% 100%;
+    --primary-foreground: 205 76% 14%;
+    --secondary: 268 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 12 91% 53%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 205 30% 22%;
+    --muted-foreground: 210 20% 80%;
+    --border: 0 0% 100% / 0.12;
+    --input: 0 0% 100% / 0.12;
+    --ring: 49 100% 50% / 0.5;
+  }
+
+  * { @apply border-border; }
+  html, body { @apply bg-background text-foreground antialiased; }
+  body {
+    font-feature-settings: "ss01", "cv11", "cv02", "cv03";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    background: var(--paper);
+  }
+  ::selection { background: rgba(242, 70, 29, 0.25); color: var(--ink-900); }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .text-pretty { text-wrap: pretty; }
+
+  /* Premium glows */
+  .glow-purple { box-shadow: 0 0 60px -10px rgba(136,58,255,0.55); }
+  .glow-orange { box-shadow: 0 0 80px -20px rgba(242,70,29,0.55); }
+  .glow-yellow { box-shadow: 0 0 80px -20px rgba(255,196,1,0.45); }
+  .glow-blue { box-shadow: 0 0 60px -10px rgba(5,41,65,0.55); }
+
+  /* Subtle grain */
+  .mito-grain::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background-image: radial-gradient(rgba(255,255,255,0.06) 1px, transparent 1px);
+    background-size: 3px 3px;
+    mix-blend-mode: overlay;
+    opacity: 0.35;
+  }
+
+  /* Gradients */
+  .text-gradient-mito {
+    background: linear-gradient(110deg, #FFFFFF 0%, #FFC401 45%, #F2461D 75%, #883AFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-orange {
+    background: linear-gradient(110deg, #FFC401 0%, #F2461D 60%, #883AFF 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .text-gradient-violet {
+    background: linear-gradient(110deg, #883AFF 0%, #F2461D 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  /* Border gradient utility */
+  .border-gradient-mito {
+    position: relative;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01));
+    border-radius: 1rem;
+  }
+  .border-gradient-mito::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 1px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(136,58,255,0.6), rgba(242,70,29,0.5), rgba(255,196,1,0.4));
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  /* Liquid glass surface */
+  .liquid-surface {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.02) 40%, rgba(255,255,255,0.05) 100%);
+    border: 1px solid rgba(255,255,255,0.12);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+  }
+  .liquid-surface-strong {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.16), rgba(136,58,255,0.12) 60%, rgba(242,70,29,0.08) 100%);
+    border: 1px solid rgba(255,255,255,0.18);
+    backdrop-filter: blur(28px) saturate(160%);
+    -webkit-backdrop-filter: blur(28px) saturate(160%);
+  }
+
+  /* Section divider arc */
+  .divider-arc {
+    position: relative;
+  }
+  .divider-arc::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -1px;
+    height: 80px;
+    background: linear-gradient(180deg, transparent, var(--paper) 70%);
+    pointer-events: none;
+  }
+
+  /* Refined dotted separator for typography */
+  .dot-divider {
+    background-image: radial-gradient(currentColor 1px, transparent 1.5px);
+    background-size: 8px 8px;
+    background-repeat: repeat-x;
+    background-position: left center;
+    height: 4px;
+    color: rgba(5,41,65,0.25);
+  }
+
+  /* Premium caption text */
+  .caption-mito {
+    font-feature-settings: "ss01";
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: 600;
+  }
+
+  /* Refined number badge */
+  .num-tag {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum", "ss01";
+  }
+
+  /* Editorial display kerning for headlines */
+  .display-tight {
+    font-feature-settings: "ss01", "cv11", "calt";
+    letter-spacing: -0.03em;
+    line-height: 0.96;
+  }
+
+  /* Subtle elevated card (for white sections) */
+  .card-paper {
+    background: linear-gradient(180deg, #ffffff 0%, #fafaf7 100%);
+    border: 1px solid rgba(5,41,65,0.08);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,0.6) inset,
+      0 1px 2px rgba(5,41,65,0.04),
+      0 30px 60px -30px rgba(5,41,65,0.18);
+  }
+
+  /* Soft fade for marquees */
+  .fade-edges {
+    -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+            mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  }
+
+  /* Subtle animated shine that travels along borders */
+  .shine-border {
+    position: relative;
+    isolation: isolate;
+  }
+  .shine-border::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(120deg, transparent 30%, rgba(255,196,1,0.55), transparent 70%);
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+            mask-composite: exclude;
+    background-size: 200% 100%;
+    animation: shimmer 4.5s linear infinite;
+    pointer-events: none;
+  }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile performance mode: below `md`, GPU-heavy effects are the main
+   cause of jank on phones (backdrop-filter forces a recomposite of
+   everything behind it on every scroll/animation frame; blur() at
+   120-180px rasterizes huge areas; infinite animations keep the
+   compositor busy even when idle). Everything here keeps the same
+   colors/branding but trims the cost, so it's the same page — just
+   lighter on mobile. */
+@media (max-width: 767px) {
+  [class*="backdrop-blur"],
+  .liquid-surface,
+  .liquid-surface-strong,
+  .mito-glass-filter {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  [class*="blur-["] {
+    filter: blur(24px) !important;
+  }
+
+  .animate-pulse-soft,
+  .animate-spin-slow,
+  .animate-spin-slower {
+    animation: none !important;
+  }
+}
