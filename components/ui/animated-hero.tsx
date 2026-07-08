@@ -12,7 +12,6 @@ import {
   MitoStageLights,
   MitoIsotypeParallax,
   MitoOrbits,
-  MitoScrollHint,
 } from "@/components/ui/mito-effects";
 import { MitoSymbol } from "@/components/site/mito-symbol";
 import { cn } from "@/lib/utils";
@@ -305,10 +304,6 @@ export function AnimatedHero({
           <MitoMarquee items={heroMarquee.slice().reverse()} reverse />
         </div>
       </div>
-
-      {!reduce && (
-        <MitoScrollHint className="absolute inset-x-0 bottom-2 z-10" />
-      )}
     </section>
   );
 }

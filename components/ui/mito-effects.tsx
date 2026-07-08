@@ -15,12 +15,11 @@ export function MitoMarquee({
   reverse?: boolean;
   className?: string;
 }) {
-  const reduce = useReducedMotion();
   return (
     <div className={className}>
       <div
         className={`flex w-max gap-12 ${
-          reduce ? "" : reverse ? "animate-marquee-reverse" : "animate-marquee"
+          reverse ? "animate-marquee-reverse" : "animate-marquee"
         }`}
         style={{ animationDuration: "38s" }}
       >

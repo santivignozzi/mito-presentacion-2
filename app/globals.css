@@ -242,6 +242,14 @@
     transition-duration: 0.001ms !important;
     scroll-behavior: auto !important;
   }
+
+  /* Capabilities marquee is a plain horizontal scroll (no flashing, no
+     large motion), so it stays animated even with reduced motion on. */
+  .animate-marquee,
+  .animate-marquee-reverse {
+    animation-duration: 38s !important;
+    animation-iteration-count: infinite !important;
+  }
 }
 
 /* Mobile performance mode: below `md`, GPU-heavy effects are the main
