@@ -83,7 +83,7 @@ export function NeedsSection() {
             return (
               <motion.a
                 key={n.title}
-                href={`mailto:gusvignozzi@mitomkt.com?subject=${encodeURIComponent(n.title)}`}
+                href={`mailto:producciones@mitomkt.com?subject=${encodeURIComponent(n.title)}`}
                 variants={fadeUp}
                 className="group relative block overflow-hidden rounded-3xl border border-mito-blue/10 bg-white p-8 transition-all hover:-translate-y-1 hover:border-mito-blue/25 hover:shadow-[0_30px_60px_-30px_rgba(5,41,65,0.25)]"
               >
