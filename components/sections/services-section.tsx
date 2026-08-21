@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
   CalendarDays,
@@ -70,6 +71,14 @@ const accentClasses: Record<
   },
 };
 
+const rotatingIntent = [
+  "intención",
+  "propósito",
+  "sentido",
+  "impacto",
+  "identidad",
+];
+
 const accentIndex: Record<string, number> = {
   purple: 1,
   orange: 2,
@@ -78,6 +87,17 @@ const accentIndex: Record<string, number> = {
 };
 
 export function ServicesSection() {
+  const [wordIndex, setWordIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setTimeout(() => {
+      setWordIndex((prev) =>
+        prev === rotatingIntent.length - 1 ? 0 : prev + 1,
+      );
+    }, 2400);
+    return () => clearTimeout(id);
+  }, [wordIndex]);
+
   return (
     <section
       id="que-hacemos"
@@ -104,8 +124,29 @@ export function ServicesSection() {
             variants={fadeUp}
             className="display-tight mt-7 text-balance text-4xl font-semibold leading-tight md:text-6xl"
           >
-            Un ecosistema de servicios para que cada evento
-            <span className="text-gradient-mito"> tenga intención</span>.
+            <span className="block">
+              Un ecosistema de servicios para que cada evento
+            </span>
+            <span className="flex items-start justify-center gap-[0.28em]">
+              <span>tenga</span>
+              <span className="relative block h-[1.45em] w-[4.55em] overflow-hidden">
+                {rotatingIntent.map((word, i) => (
+                  <motion.span
+                    key={word}
+                    className="absolute inset-x-0 top-0 text-left text-gradient-mito"
+                    initial={{ opacity: 0, y: "-100%" }}
+                    transition={{ type: "spring", stiffness: 80, damping: 18 }}
+                    animate={
+                      wordIndex === i
+                        ? { y: 0, opacity: 1 }
+                        : { y: wordIndex > i ? -120 : 120, opacity: 0 }
+                    }
+                  >
+                    {word}.
+                  </motion.span>
+                ))}
+              </span>
+            </span>
           </motion.h2>
           <motion.p
             variants={fadeUp}
