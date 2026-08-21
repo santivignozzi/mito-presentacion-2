@@ -9,6 +9,7 @@ import { WhySection } from "@/components/sections/why-section";
 import { ClosingSection } from "@/components/sections/closing-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteNav } from "@/components/site/site-nav";
+import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 
 export default function Page() {
   return (
@@ -24,6 +25,7 @@ export default function Page() {
       <WhySection />
       <ClosingSection />
       <SiteFooter />
+      <WhatsAppFloat />
     </main>
   );
 }
