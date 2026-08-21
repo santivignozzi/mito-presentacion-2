@@ -177,6 +177,22 @@ export const reasons = [
   "Diseñamos eventos con intención, no solo con logística.",
 ];
 
+// `src` apunta a public/logos/clientes. Sin `src` se muestra el nombre como wordmark.
+export const clients: { name: string; src?: string }[] = [
+  { name: "Red Hat", src: "/logos/clientes/red-hat.svg" },
+  { name: "COELSA", src: "/logos/clientes/coelsa.png" },
+  { name: "Avalian", src: "/logos/clientes/avalian.png" },
+  { name: "Herbalife", src: "/logos/clientes/herbalife.svg" },
+  { name: "SAP", src: "/logos/clientes/sap.svg" },
+  { name: "IBM", src: "/logos/clientes/ibm.svg" },
+  { name: "Concentrix", src: "/logos/clientes/concentrix.svg" },
+  { name: "Toyota", src: "/logos/clientes/toyota.svg" },
+  { name: "Citi", src: "/logos/clientes/citi.png" },
+  { name: "Oracle", src: "/logos/clientes/oracle.svg" },
+  { name: "Cirion", src: "/logos/clientes/cirion.png" },
+  { name: "Motorola", src: "/logos/clientes/motorola.svg" },
+];
+
 export const socials = [
   { label: "Instagram", href: "https://www.instagram.com/mitomkt.ok/" },
   {

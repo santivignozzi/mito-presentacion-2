@@ -5,6 +5,7 @@ import { ProcessSection } from "@/components/sections/process-section";
 import { ManifestoSection } from "@/components/sections/manifesto-section";
 import { NeedsSection } from "@/components/sections/needs-section";
 import { CasesSection } from "@/components/sections/cases-section";
+import { ClientsSection } from "@/components/sections/clients-section";
 import { WhySection } from "@/components/sections/why-section";
 import { ClosingSection } from "@/components/sections/closing-section";
 import { SiteFooter } from "@/components/sections/site-footer";
@@ -22,6 +23,7 @@ export default function Page() {
       <ManifestoSection />
       <NeedsSection />
       <CasesSection />
+      <ClientsSection />
       <WhySection />
       <ClosingSection />
       <SiteFooter />
