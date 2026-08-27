@@ -97,7 +97,7 @@ export function AnimatedHero({
 
       <div className="container relative z-10 grid min-h-[100svh] items-center gap-14 py-28 md:py-36 lg:grid-cols-12">
         {/* Copy */}
-        <div className="lg:col-span-7">
+        <div className="min-w-0 lg:col-span-7">
           <motion.div
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
@@ -116,13 +116,13 @@ export function AnimatedHero({
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.05 }}
-            className="display-tight mt-10 max-w-4xl text-balance text-[2.75rem] font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[5.5rem]"
+            className="display-tight mt-10 max-w-4xl text-balance text-[2rem] font-semibold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-[5.5rem]"
           >
-            <span className="block">Creamos experiencias</span>
-            <span className="block">corporativas que se</span>
-            <span className="relative inline-flex h-[1.05em] items-end overflow-hidden align-baseline">
-              <span className="text-white/80">sienten&nbsp;</span>
-              <span className="relative inline-flex w-[6.5em] justify-start overflow-hidden">
+            <span className="inline sm:block">Creamos experiencias </span>
+            <span className="inline sm:block">corporativas que se </span>
+            <span className="inline sm:block">
+              <span className="text-white/80">sienten </span>
+              <span className="relative inline-flex h-[1.05em] w-[6.5em] items-end justify-start overflow-hidden align-bottom">
                 &nbsp;
                 {titles.map((title, i) => (
                   <motion.span

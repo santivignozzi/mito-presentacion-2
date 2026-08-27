@@ -38,10 +38,10 @@ export function SiteNav() {
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
         <Link href="#inicio" className="flex items-center gap-3" aria-label="Inicio Mito">
-          <MitoLogo variant="inverse" className="h-8 w-auto md:h-9" />
+          <MitoLogo variant="inverse" className="h-8 w-auto md:h-9" priority />
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex">
+        <nav className="hidden items-center gap-1 lg:flex">
           {nav.map((item, idx) => (
             <Link
               key={item.href}
@@ -56,7 +56,7 @@ export function SiteNav() {
           ))}
         </nav>
 
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <LiquidButton asChild size="default" variant="orange">
             <a href="#contacto">
               <Phone className="h-4 w-4" /> Contactar a Mito
@@ -66,7 +66,7 @@ export function SiteNav() {
 
         <button
           onClick={() => setOpen((v) => !v)}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white md:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-white/5 text-white lg:hidden"
           aria-label="Abrir menú"
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -74,7 +74,7 @@ export function SiteNav() {
       </div>
 
       {open && (
-        <div className="md:hidden">
+        <div className="lg:hidden">
           <div className="container pb-6">
             <div className="rounded-2xl border border-white/10 bg-mito-blue/95 p-3 backdrop-blur-md">
               {nav.map((item, idx) => (

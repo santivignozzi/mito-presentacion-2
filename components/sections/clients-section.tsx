@@ -103,6 +103,8 @@ export function ClientsSection() {
                     src={client.src}
                     alt={client.name}
                     draggable={false}
+                    loading="lazy"
+                    decoding="async"
                     className="h-8 w-[104px] object-contain opacity-70 [filter:brightness(0)_invert(1)] transition duration-300 hover:opacity-100 hover:[filter:none] md:h-9 md:w-[120px]"
                   />
                 ) : (
