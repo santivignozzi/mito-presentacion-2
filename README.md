@@ -34,47 +34,55 @@ corporativas, producción integral y marketing B2B.
 - `components/ui/animated-hero.tsx` — hero premium con isotipo parallax,
   marquee de capabilities, glass badges y CTAs LiquidButton
 
-## Deploy en Netlify
+## Deploy en Vercel
 
-### Opción 1 — Conectar repo de Git
-1. Pusheá esta carpeta a un repo (GitHub, GitLab o Bitbucket).
-2. Entrá a [app.netlify.com](https://app.netlify.com) → **Add new site → Import existing project**.
-3. Elegí el repo. Netlify detecta Next.js automáticamente.
-4. Build command: `npm run build` (default). Publish dir: `.next` (default).
-5. **Environment variables**: agregá `NEXT_PUBLIC_SITE_URL` con tu dominio final
-   (ej: `https://mitomkt.com`).
-6. Deploy.
+El repo está conectado al proyecto **`mito-presentacion-2`** en Vercel: cada push
+a `main` dispara un deploy de producción automático. No hace falta hacer nada más.
 
-### Opción 2 — Deploy manual (sin Git)
-1. `npm install`
-2. `npm run build`
-3. Arrastrá la carpeta del proyecto a <https://app.netlify.com/drop>
-4. Netlify detecta Next.js y compila automáticamente.
+- Producción: <https://mito-presentacion-2.vercel.app>
+- Build command y output son los de Next.js por defecto; no hay archivo de
+  configuración porque no se necesita.
 
-### Opción 3 — Netlify CLI
+### Deploy manual (sin pasar por Git)
+
 ```bash
-npm install -g netlify-cli
-netlify login
-netlify init        # detecta Next.js y crea netlify.toml
-netlify deploy --prod
+npm install -g vercel
+vercel login
+vercel --prod
 ```
 
-> El plugin `@netlify/plugin-nextjs` se instala automáticamente la primera vez
-> que Netlify compila, gracias al bloque `[[plugins]]` en `netlify.toml`.
+## Analytics
 
-## Dominio personalizado
-1. En Netlify → **Domain settings → Add custom domain**.
-2. Apuntá el CNAME de tu dominio a `apex-loadbalancer.netlify.com` (o seguí
-   las instrucciones específicas que te muestra Netlify).
-3. Activá HTTPS automático (Let's Encrypt).
+El sitio usa **Vercel Web Analytics**: el paquete `@vercel/analytics` y el
+componente `<Analytics />` montado en `app/layout.tsx`.
+
+- En desarrollo corre en modo debug y **no envía** eventos; los logs
+  `[Vercel Web Analytics] Debug mode is enabled` en consola son normales.
+- Para comprobar que está vivo en producción, `/_vercel/insights/script.js`
+  tiene que devolver `200` (si da `404`, está desactivado en el proyecto o
+  falta un redeploy).
+
+## Dominio
+
+El dominio final es **`mitomkt.com`**, pero hoy ahí vive otro sitio, así que la
+URL canónica de esta landing apunta a la de Vercel. Para migrarla:
+
+1. Vercel → proyecto → **Settings → Domains** → agregar `mitomkt.com` y seguir
+   las instrucciones de DNS que muestra.
+2. Crear la variable `NEXT_PUBLIC_SITE_URL` con valor `https://mitomkt.com`.
+3. Redeployar.
+
+No hay que tocar código: `app/layout.tsx` (`metadataBase`), `app/sitemap.ts` y
+`app/robots.ts` leen todos esa variable.
 
 ## Variables de entorno
 
-| Variable                 | Ejemplo                       | Descripción                          |
-| ------------------------ | ----------------------------- | ------------------------------------ |
-| `NEXT_PUBLIC_SITE_URL`   | `https://mitomkt.com`         | URL pública (sitemap, robots, OG).   |
+| Variable               | Valor actual                            | Descripción                        |
+| ---------------------- | --------------------------------------- | ---------------------------------- |
+| `NEXT_PUBLIC_SITE_URL` | `https://mito-presentacion-2.vercel.app` | URL pública (sitemap, robots, OG). |
 
-Copiá `.env.example` a `.env.local` para desarrollo.
+Si no está definida, el código cae al mismo valor por defecto. Copiá
+`.env.example` a `.env.local` para desarrollo.
 
 ## Desarrollo local
 
@@ -91,6 +99,10 @@ Abrí <http://localhost:3000>.
 npm run build
 npm start
 ```
+
+> Cortá el `npm run dev` antes de buildear. Si corrés los dos a la vez, el build
+> pisa `.next` y el dev server empieza a tirar `MODULE_NOT_FOUND` con 500; se
+> arregla borrando `.next` y reiniciando.
 
 ## Estructura
 

@@ -5,5 +5,5 @@ out
 *.log
 .env*
 !.env.example
-.netlify
+.vercel
 .claude/settings.local.json
