@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://mitomarketing.com";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://mito-presentacion-2.vercel.app";
 
 export default function robots(): MetadataRoute.Robots {
   return {

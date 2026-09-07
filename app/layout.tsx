@@ -5,11 +5,14 @@ import { Analytics } from "@vercel/analytics/next";
 
 import "./globals.css";
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://mito-presentacion-2.vercel.app";
+
 export const metadata: Metadata = {
   title: "Mito Marketing · Agencia de experiencias corporativas",
   description:
     "Mito es una agencia boutique que diseña, produce y comunica eventos corporativos, activaciones y experiencias de marca para conectar a las marcas con las personas.",
-  metadataBase: new URL("https://mitomarketing.com"),
+  metadataBase: new URL(SITE_URL),
   openGraph: {
     title: "Mito Marketing · Agencia de experiencias corporativas",
     description:

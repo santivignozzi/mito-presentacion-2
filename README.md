@@ -42,7 +42,7 @@ corporativas, producción integral y marketing B2B.
 3. Elegí el repo. Netlify detecta Next.js automáticamente.
 4. Build command: `npm run build` (default). Publish dir: `.next` (default).
 5. **Environment variables**: agregá `NEXT_PUBLIC_SITE_URL` con tu dominio final
-   (ej: `https://mitomarketing.com`).
+   (ej: `https://mitomkt.com`).
 6. Deploy.
 
 ### Opción 2 — Deploy manual (sin Git)
@@ -72,7 +72,7 @@ netlify deploy --prod
 
 | Variable                 | Ejemplo                       | Descripción                          |
 | ------------------------ | ----------------------------- | ------------------------------------ |
-| `NEXT_PUBLIC_SITE_URL`   | `https://mitomarketing.com`   | URL pública (sitemap, robots, OG).   |
+| `NEXT_PUBLIC_SITE_URL`   | `https://mitomkt.com`         | URL pública (sitemap, robots, OG).   |
 
 Copiá `.env.example` a `.env.local` para desarrollo.
 
