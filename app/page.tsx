@@ -13,10 +13,15 @@ import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteNav } from "@/components/site/site-nav";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
 import { faqs } from "@/data/content";
+import { CONTENT_UPDATED, SITE_URL } from "@/lib/site";
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
+  "@id": `${SITE_URL}/#faq`,
+  inLanguage: "es-AR",
+  dateModified: CONTENT_UPDATED,
+  about: { "@id": `${SITE_URL}/#organization` },
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,

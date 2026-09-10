@@ -8,7 +8,7 @@ import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteNav } from "@/components/site/site-nav";
 import { cases } from "@/data/content";
-import { SITE_URL, business } from "@/lib/site";
+import { CONTENT_UPDATED, SITE_URL, business } from "@/lib/site";
 
 type Params = { params: { slug: string } };
 
@@ -59,6 +59,7 @@ export default function CasePage({ params }: Params) {
         inLanguage: "es-AR",
         about: c.type,
         keywords: c.capabilities.join(", "),
+        dateModified: CONTENT_UPDATED,
         creator: { "@id": `${SITE_URL}/#organization` },
       },
       {

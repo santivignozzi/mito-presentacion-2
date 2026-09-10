@@ -221,42 +221,42 @@ export const faqs = [
   {
     question: "¿Qué tipo de eventos corporativos organiza Mito?",
     answer:
-      "Mito produce lanzamientos de producto, encuentros empresariales, capacitaciones y jornadas, fiestas de fin de año, after office, summits con paneles de expertos, activaciones de marca y experiencias para clientes. En todos los casos la agencia cubre el diseño del concepto, la producción y la comunicación del evento.",
+      "Mito organiza eventos corporativos B2B desde Buenos Aires y produce ocho formatos principales: lanzamientos de producto y presentaciones, encuentros empresariales, capacitaciones y jornadas de trabajo, fiestas de fin de año, after office e instancias de integración, summits con paneles de expertos, activaciones de marca y experiencias para clientes. En todos los casos el alcance es el mismo: la agencia define el concepto creativo, produce el evento de punta a punta y se ocupa de la comunicación previa y posterior. Eso incluye la búsqueda del venue, el sonido, la iluminación y las pantallas, la ambientación y la coordinación de todos los proveedores. Tres ejemplos concretos de su portfolio son una reunión estratégica para Red Hat, la fiesta de fin de año de COELSA y un summit de expertos para Elea. El formato se elige según el objetivo de comunicación de la empresa, no al revés.",
   },
   {
     question: "¿En qué zonas trabaja Mito?",
     answer:
-      "La base de Mito está en Buenos Aires, Argentina. La agencia produce eventos en AMBA, viaja al interior del país y trabaja también en otros mercados de América Latina.",
+      "La base operativa de Mito está en Buenos Aires, Argentina, y desde ahí cubre tres alcances. El primero es AMBA, donde produce la mayoría de sus eventos. El segundo es el interior del país: el equipo viaja a la ciudad donde se realiza el evento y coordina ahí la producción técnica y la logística. El tercero es América Latina, para compañías que necesitan llevar un formato a otros mercados de la región. Como cada evento se cotiza a medida, el traslado del equipo y de la producción se contempla dentro del presupuesto general, junto con el venue y la producción técnica. Para eventos fuera de AMBA conviene mencionar la ciudad en el primer contacto: la disponibilidad de venues y de proveedores locales es lo que suele condicionar qué fechas son viables y con cuánto margen se puede trabajar.",
   },
   {
     question: "¿Con cuánta anticipación hay que contratar la organización de un evento?",
     answer:
-      "No hay un plazo único: depende del formato y de la escala del evento. Lo que suele definir el tiempo mínimo es la disponibilidad del venue y de los proveedores técnicos en la fecha elegida. La recomendación es escribir con la fecha tentativa lo antes posible para saber si es viable y con qué margen se trabaja.",
+      "No hay un plazo mínimo fijo: depende del formato y de la escala. Lo que en la práctica define el tiempo necesario no es la agencia sino la disponibilidad de terceros, sobre todo el venue y los proveedores técnicos de sonido, iluminación y pantallas en la fecha elegida. Un encuentro chico en una fecha de baja demanda se puede resolver con poca anticipación. Una fiesta de fin de año en noviembre o diciembre, en cambio, compite con el resto del mercado por los mismos salones y equipos, así que ahí el margen se achica bastante. Cuando el evento incluye comunicación previa —campañas digitales, email marketing, piezas para redes— hay que sumar el tiempo de esa producción, que corre en paralelo. La recomendación práctica es escribir con la fecha tentativa apenas exista, aunque el resto del alcance todavía esté abierto.",
   },
   {
     question: "¿Cuánto cuesta organizar un evento corporativo?",
     answer:
-      "Mito no maneja una lista de precios cerrada: cada evento se cotiza a medida. El presupuesto depende de la cantidad de asistentes, el venue, la producción técnica (sonido, iluminación y pantallas), la ambientación y la duración. Se arma una propuesta con el alcance definido antes de avanzar.",
+      "Mito no publica una lista de precios: cada evento se cotiza a medida, porque el rango entre un formato y otro es demasiado amplio como para que un número de referencia signifique algo. El presupuesto se arma sobre cinco variables. La cantidad de asistentes, que condiciona el venue y el catering. El venue elegido, que suele ser el ítem más pesado. La producción técnica, es decir sonido, iluminación y pantallas. La ambientación y la dirección estética. Y la duración, que impacta en personal y en alquileres. A eso puede sumarse la comunicación previa y posterior si la empresa la contrata. El circuito es siempre el mismo: primero se define el alcance en una conversación, después se arma una propuesta sobre ese alcance cerrado y recién ahí hay un número.",
   },
   {
     question: "¿Mito se ocupa solo de la producción o también de la comunicación?",
     answer:
-      "De las dos cosas. Además de la producción integral del evento, Mito trabaja la comunicación previa y posterior: campañas digitales, email marketing, piezas gráficas, contenido para redes y estrategia B2B. La idea es que el evento no empiece ni termine el día del evento.",
+      "De las dos cosas, y ese es el diferencial del modelo. Mito produce el evento de punta a punta —venue, sonido, iluminación, pantallas, ambientación, catering, logística y timings— y además trabaja la comunicación alrededor: campañas digitales, email marketing, piezas gráficas, contenido para redes, branding aplicado al evento y estrategia B2B integral. La lógica es que un evento corporativo no empieza ni termina el día del evento. Antes hay que convocar a la audiencia correcta y construir expectativa; después hay que capitalizar lo que pasó, con contenido y seguimiento, para que el impacto no se agote en las horas del encuentro. Una empresa puede contratar solamente la producción, pero cuando el objetivo es de comunicación —un lanzamiento, un reposicionamiento, un mensaje interno— la parte previa y posterior suele ser la que define si el evento cumplió o no.",
   },
   {
     question: "¿Hay que contratar proveedores por separado?",
     answer:
-      "No. Mito coordina la red de proveedores completa —venue, sonido, iluminación, pantallas, ambientación, catering y logística— y responde por la ejecución general. La empresa cliente tiene un solo interlocutor para todo el evento.",
+      "No. Mito coordina la red completa de proveedores y responde por la ejecución general del evento, así que la empresa cliente tiene un solo interlocutor. Eso cubre la búsqueda y la negociación del venue, el sonido, la iluminación y las pantallas, la ambientación, el catering, la logística y los timings del día. La ventaja operativa concreta es que la empresa no tiene que gestionar contratos, tiempos de montaje ni responsabilidades cruzadas entre seis o siete compañías distintas: si algo falla durante el evento, hay un único responsable de resolverlo. Esto evita además el problema más común de la producción fragmentada, que aparece cuando cada proveedor cumple su parte por separado pero nadie se hizo cargo de que esas partes encajaran entre sí, que es donde suelen romperse los timings.",
   },
   {
     question: "¿Qué tamaño de evento puede producir Mito?",
     answer:
-      "Mito trabaja tanto formatos íntimos, como una reunión estratégica con socios clave, como eventos de compañía entera, tipo una fiesta de fin de año con todo el equipo. El formato se define según el objetivo de comunicación, no según un mínimo de asistentes.",
+      "Mito no maneja un mínimo de asistentes: el formato se define según el objetivo de comunicación, no según el tamaño de la convocatoria. En el extremo chico produce encuentros íntimos, como una reunión estratégica con socios clave, donde el valor está en la conversación y la producción tiene que ser precisa pero discreta. En el extremo grande produce eventos de compañía entera, como una fiesta de fin de año con todo el equipo, donde cambia por completo la escala de venue, catering, producción técnica y logística. Entre los dos hay formatos intermedios: capacitaciones, jornadas de trabajo, summits con paneles de expertos, lanzamientos y activaciones de marca. La pregunta que ordena la decisión no es cuánta gente entra en el salón sino qué tiene que pasar en ese encuentro y qué se quiere que la audiencia se lleve.",
   },
   {
     question: "¿Con qué empresas trabajó Mito?",
     answer:
-      "Entre los clientes de Mito hay compañías como Red Hat, COELSA, Avalian, Herbalife, SAP, IBM, Concentrix, Toyota, Citi, Oracle, Cirion y Motorola.",
+      "Entre los clientes de Mito hay compañías como Red Hat, COELSA, Avalian, Herbalife, SAP, IBM, Concentrix, Toyota, Citi, Oracle, Cirion y Motorola. Es una cartera mayormente B2B y corporativa, con peso de tecnología (Red Hat, IBM, Oracle, SAP, Motorola, Cirion, Concentrix), servicios financieros (Citi, COELSA), salud y consumo (Avalian, Herbalife) e industria (Toyota). Tres proyectos están documentados en detalle en el sitio, con su objetivo y la solución que se produjo: una reunión estratégica para Red Hat, la fiesta de fin de año de COELSA y un summit de expertos para Elea. Trabajar con organizaciones de este tipo implica un estándar concreto de ejecución: procesos de compras y de alta de proveedores formales, requisitos de marca estrictos y tolerancia baja al error el día del evento, porque suele haber directivos o clientes finales presentes.",
   },
 ];
 
