@@ -32,7 +32,7 @@ export function SiteFooter() {
               {services.map((s) => (
                 <li key={s.title}>
                   <Link
-                    href="#que-hacemos"
+                    href="/#que-hacemos"
                     className="text-sm text-white/85 transition-colors hover:text-mito-yellow"
                   >
                     {s.title}

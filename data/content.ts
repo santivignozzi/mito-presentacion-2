@@ -140,30 +140,51 @@ export const manifesto = [
 export const cases = [
   {
     code: "M-01",
+    slug: "coelsa-fiesta-fin-de-ano",
     client: "Coelsa",
     type: "Fiesta de fin de año",
     objective: "Celebrar el cierre de año con todo el equipo de Coelsa.",
     solution: "Producción integral del evento con un gran display audiovisual como eje central de la experiencia.",
     image: "/casos/coelsa.jpg",
     instagramUrl: "https://www.instagram.com/p/DStHC5WCmsU/",
+    capabilities: [
+      "Producción integral",
+      "Display audiovisual",
+      "Ambientación",
+      "Coordinación de proveedores",
+    ],
   },
   {
     code: "M-02",
+    slug: "red-hat-reunion-estrategica",
     client: "Red Hat",
     type: "Reunión estratégica",
     objective: "Analizar la trayectoria de la empresa y sus resultados junto a socios clave.",
     solution: "Encuentro íntimo y focalizado, con producción de contenido y ambientación acorde al tono estratégico del encuentro.",
     image: "/casos/redhat.jpg",
     instagramUrl: "https://www.instagram.com/p/DX9ToPKDdsj/?img_index=3",
+    capabilities: [
+      "Producción de contenido",
+      "Ambientación",
+      "Formato íntimo",
+      "Coordinación con socios",
+    ],
   },
   {
     code: "M-03",
+    slug: "elea-summit-de-expertos",
     client: "Elea",
     type: "Summit de expertos",
     objective: "Reunir a especialistas para presentar productos y servicios de la compañía.",
     solution: "Producción de un summit con paneles de expertos, puesta escénica y experiencia de marca de punta a punta.",
     image: "/casos/elea.jpg",
     instagramUrl: "https://www.instagram.com/p/DWWT8HPDRur/",
+    capabilities: [
+      "Paneles de expertos",
+      "Puesta escénica",
+      "Experiencia de marca",
+      "Producción general",
+    ],
   },
 ];
 
@@ -191,6 +212,52 @@ export const clients: { name: string; src?: string }[] = [
   { name: "Oracle", src: "/logos/clientes/oracle.svg" },
   { name: "Cirion", src: "/logos/clientes/cirion.png" },
   { name: "Motorola", src: "/logos/clientes/motorola.svg" },
+];
+
+// Respuestas pensadas para ser citables: cada una se sostiene sola, sin
+// depender del resto de la página. Alimentan la sección FAQ y el schema
+// FAQPage, así que conviene que sean afirmaciones concretas y verificables.
+export const faqs = [
+  {
+    question: "¿Qué tipo de eventos corporativos organiza Mito?",
+    answer:
+      "Mito produce lanzamientos de producto, encuentros empresariales, capacitaciones y jornadas, fiestas de fin de año, after office, summits con paneles de expertos, activaciones de marca y experiencias para clientes. En todos los casos la agencia cubre el diseño del concepto, la producción y la comunicación del evento.",
+  },
+  {
+    question: "¿En qué zonas trabaja Mito?",
+    answer:
+      "La base de Mito está en Buenos Aires, Argentina. La agencia produce eventos en AMBA, viaja al interior del país y trabaja también en otros mercados de América Latina.",
+  },
+  {
+    question: "¿Con cuánta anticipación hay que contratar la organización de un evento?",
+    answer:
+      "No hay un plazo único: depende del formato y de la escala del evento. Lo que suele definir el tiempo mínimo es la disponibilidad del venue y de los proveedores técnicos en la fecha elegida. La recomendación es escribir con la fecha tentativa lo antes posible para saber si es viable y con qué margen se trabaja.",
+  },
+  {
+    question: "¿Cuánto cuesta organizar un evento corporativo?",
+    answer:
+      "Mito no maneja una lista de precios cerrada: cada evento se cotiza a medida. El presupuesto depende de la cantidad de asistentes, el venue, la producción técnica (sonido, iluminación y pantallas), la ambientación y la duración. Se arma una propuesta con el alcance definido antes de avanzar.",
+  },
+  {
+    question: "¿Mito se ocupa solo de la producción o también de la comunicación?",
+    answer:
+      "De las dos cosas. Además de la producción integral del evento, Mito trabaja la comunicación previa y posterior: campañas digitales, email marketing, piezas gráficas, contenido para redes y estrategia B2B. La idea es que el evento no empiece ni termine el día del evento.",
+  },
+  {
+    question: "¿Hay que contratar proveedores por separado?",
+    answer:
+      "No. Mito coordina la red de proveedores completa —venue, sonido, iluminación, pantallas, ambientación, catering y logística— y responde por la ejecución general. La empresa cliente tiene un solo interlocutor para todo el evento.",
+  },
+  {
+    question: "¿Qué tamaño de evento puede producir Mito?",
+    answer:
+      "Mito trabaja tanto formatos íntimos, como una reunión estratégica con socios clave, como eventos de compañía entera, tipo una fiesta de fin de año con todo el equipo. El formato se define según el objetivo de comunicación, no según un mínimo de asistentes.",
+  },
+  {
+    question: "¿Con qué empresas trabajó Mito?",
+    answer:
+      "Entre los clientes de Mito hay compañías como Red Hat, COELSA, Avalian, Herbalife, SAP, IBM, Concentrix, Toyota, Citi, Oracle, Cirion y Motorola.",
+  },
 ];
 
 export const socials = [

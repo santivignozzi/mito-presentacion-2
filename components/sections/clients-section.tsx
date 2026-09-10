@@ -117,6 +117,15 @@ export function ClientsSection() {
           </ul>
         ))}
       </div>
+
+      {/* Los logos son SVG/PNG: un modelo de lenguaje no los "ve". Esta línea
+          deja la prueba social como texto indexable y citable. */}
+      <div className="container">
+        <p className="mt-5 text-center text-xs leading-relaxed text-white/40">
+          Mito produjo eventos corporativos para{" "}
+          {clients.map((c) => c.name).join(", ")}.
+        </p>
+      </div>
     </section>
   );
 }

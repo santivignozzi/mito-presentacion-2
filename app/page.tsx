@@ -7,14 +7,30 @@ import { NeedsSection } from "@/components/sections/needs-section";
 import { CasesSection } from "@/components/sections/cases-section";
 import { ClientsSection } from "@/components/sections/clients-section";
 import { WhySection } from "@/components/sections/why-section";
+import { FaqSection } from "@/components/sections/faq-section";
 import { ClosingSection } from "@/components/sections/closing-section";
 import { SiteFooter } from "@/components/sections/site-footer";
 import { SiteNav } from "@/components/site/site-nav";
 import { WhatsAppFloat } from "@/components/site/whatsapp-float";
+import { faqs } from "@/data/content";
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: { "@type": "Answer", text: faq.answer },
+  })),
+};
 
 export default function Page() {
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <SiteNav />
       <AnimatedHero />
       <AboutSection />
@@ -25,6 +41,7 @@ export default function Page() {
       <CasesSection />
       <ClientsSection />
       <WhySection />
+      <FaqSection />
       <ClosingSection />
       <SiteFooter />
       <WhatsAppFloat />

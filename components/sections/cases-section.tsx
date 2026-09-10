@@ -54,9 +54,7 @@ export function CasesSection() {
           {cases.map((c, i) => (
             <motion.a
               key={c.code}
-              href={c.instagramUrl}
-              target="_blank"
-              rel="noopener noreferrer"
+              href={`/casos/${c.slug}/`}
               variants={fadeUp}
               className="group relative block overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-6 backdrop-blur transition-all hover:-translate-y-1 hover:border-white/25"
             >

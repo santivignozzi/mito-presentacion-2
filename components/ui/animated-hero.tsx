@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import { motion, useReducedMotion } from "framer-motion";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, MoveRight, Phone, Sparkles } from "lucide-react";
 
 import { LiquidButton } from "@/components/ui/liquid-glass-button";
@@ -122,23 +122,28 @@ export function AnimatedHero({
             <span className="inline sm:block">corporativas que se </span>
             <span className="inline sm:block">
               <span className="text-white/80">sienten </span>
+              {/* Solo el término activo vive en el DOM: así el h1 se lee como
+                  una frase completa para crawlers y lectores de pantalla. */}
               <span className="relative inline-flex h-[1.05em] w-[6.5em] items-end justify-start overflow-hidden align-bottom">
                 &nbsp;
-                {titles.map((title, i) => (
+                <AnimatePresence initial={false} mode="wait">
                   <motion.span
-                    key={title}
+                    key={titles[index]}
                     className="absolute font-semibold text-gradient-mito"
-                    initial={{ opacity: 0, y: "-100%" }}
+                    initial={{ opacity: 0, y: "100%" }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{
+                      opacity: 0,
+                      y: "-100%",
+                      // Salida corta: con `mode="wait"` este tiempo es el hueco
+                      // en el que la ranura queda vacía.
+                      transition: { duration: 0.22, ease: "easeIn" },
+                    }}
                     transition={{ type: "spring", stiffness: 80, damping: 18 }}
-                    animate={
-                      index === i
-                        ? { y: 0, opacity: 1 }
-                        : { y: index > i ? -120 : 120, opacity: 0 }
-                    }
                   >
-                    {title}
+                    {titles[index]}
                   </motion.span>
-                ))}
+                </AnimatePresence>
               </span>
             </span>
           </motion.h1>

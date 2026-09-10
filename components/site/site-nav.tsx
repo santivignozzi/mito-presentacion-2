@@ -8,12 +8,14 @@ import { LiquidButton } from "@/components/ui/liquid-glass-button";
 import { MitoLogo } from "@/components/site/mito-logo";
 import { cn } from "@/lib/utils";
 
+// Anchors absolutos (`/#...`) para que el nav también funcione desde
+// /casos/[slug], no sólo desde la home.
 const nav = [
-  { label: "Qué es Mito", href: "#que-es" },
-  { label: "Qué hacemos", href: "#que-hacemos" },
-  { label: "Proceso", href: "#proceso" },
-  { label: "Casos", href: "#casos" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Qué es Mito", href: "/#que-es" },
+  { label: "Qué hacemos", href: "/#que-hacemos" },
+  { label: "Proceso", href: "/#proceso" },
+  { label: "Casos", href: "/#casos" },
+  { label: "Contacto", href: "/#contacto" },
 ];
 
 export function SiteNav() {
@@ -37,7 +39,7 @@ export function SiteNav() {
       )}
     >
       <div className="container flex h-16 items-center justify-between md:h-20">
-        <Link href="#inicio" className="flex items-center gap-3" aria-label="Inicio Mito">
+        <Link href="/#inicio" className="flex items-center gap-3" aria-label="Inicio Mito">
           <MitoLogo variant="inverse" className="h-8 w-auto md:h-9" priority />
         </Link>
 
@@ -58,7 +60,7 @@ export function SiteNav() {
 
         <div className="hidden lg:block">
           <LiquidButton asChild size="default" variant="orange">
-            <a href="#contacto">
+            <a href="/#contacto">
               <Phone className="h-4 w-4" /> Contactar a Mito
             </a>
           </LiquidButton>
@@ -96,7 +98,7 @@ export function SiteNav() {
                 size="default"
                 className="mt-2 w-full"
               >
-                <a href="#contacto" onClick={() => setOpen(false)}>
+                <a href="/#contacto" onClick={() => setOpen(false)}>
                   <Phone className="h-4 w-4" /> Contactar a Mito
                 </a>
               </LiquidButton>

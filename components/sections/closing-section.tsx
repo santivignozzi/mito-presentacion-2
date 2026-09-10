@@ -29,7 +29,7 @@ export function ClosingSection() {
           className="mx-auto max-w-3xl text-center"
         >
           <motion.div variants={fadeUp} className="flex items-center justify-center gap-4">
-            <span className="caption-mito text-mito-yellow">08 · Cierre</span>
+            <span className="caption-mito text-mito-yellow">09 · Cierre</span>
             <span className="h-px w-24 bg-white/15" />
           </motion.div>
           <motion.h2
