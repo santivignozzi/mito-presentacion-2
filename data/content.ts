@@ -145,7 +145,7 @@ export const cases = [
     type: "Fiesta de fin de año",
     objective: "Celebrar el cierre de año con todo el equipo de Coelsa.",
     solution: "Producción integral del evento con un gran display audiovisual como eje central de la experiencia.",
-    image: "/casos/coelsa.jpg",
+    image: "/casos/coelsa.webp",
     instagramUrl: "https://www.instagram.com/p/DStHC5WCmsU/",
     capabilities: [
       "Producción integral",
@@ -161,7 +161,7 @@ export const cases = [
     type: "Reunión estratégica",
     objective: "Analizar la trayectoria de la empresa y sus resultados junto a socios clave.",
     solution: "Encuentro íntimo y focalizado, con producción de contenido y ambientación acorde al tono estratégico del encuentro.",
-    image: "/casos/redhat.jpg",
+    image: "/casos/redhat.webp",
     instagramUrl: "https://www.instagram.com/p/DX9ToPKDdsj/?img_index=3",
     capabilities: [
       "Producción de contenido",
@@ -177,7 +177,7 @@ export const cases = [
     type: "Summit de expertos",
     objective: "Reunir a especialistas para presentar productos y servicios de la compañía.",
     solution: "Producción de un summit con paneles de expertos, puesta escénica y experiencia de marca de punta a punta.",
-    image: "/casos/elea.jpg",
+    image: "/casos/elea.webp",
     instagramUrl: "https://www.instagram.com/p/DWWT8HPDRur/",
     capabilities: [
       "Paneles de expertos",
