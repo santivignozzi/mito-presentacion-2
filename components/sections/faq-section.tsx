@@ -64,7 +64,13 @@ export function FaqSection() {
                       {faq.question}
                     </h3>
                   </summary>
-                  <p className="text-pretty px-5 pb-5 pl-16 text-sm leading-relaxed text-mito-blue/70">
+                  {/* Tope de medida: las respuestas son largas a propósito (para
+                      que se puedan citar enteras), y sin límite la línea llega a
+                      ~99 caracteres en desktop, muy por encima del rango legible.
+                      El valor está calibrado midiendo cortes de línea reales, no
+                      por la unidad `ch`: el glifo `0` de Geist es ancho y `ch`
+                      rinde bastante más de un caracter promedio de texto. */}
+                  <p className="max-w-[58ch] text-pretty px-5 pb-5 text-sm leading-relaxed text-mito-blue/70 md:pl-16">
                     {faq.answer}
                   </p>
                 </details>
