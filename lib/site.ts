@@ -10,7 +10,7 @@ export const CONTENT_UPDATED = "2026-09-10";
 export const business = {
   name: "Mito Marketing",
   legalName: "Mito Marketing",
-  email: "producciones@mitomkt.com",
+  email: "produccion@mitomkt.com",
   phone: "+5491178870751",
   phoneDisplay: "+54 9 11 7887 0751",
   city: "Buenos Aires",

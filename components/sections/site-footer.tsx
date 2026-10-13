@@ -46,8 +46,8 @@ export function SiteFooter() {
             <div className="caption-mito text-white/50">Contacto</div>
             <ul className="mt-5 space-y-2.5 text-sm">
               <li>
-                <a className="hover:text-white" href="mailto:producciones@mitomkt.com">
-                  producciones@mitomkt.com
+                <a className="hover:text-white" href="mailto:produccion@mitomkt.com">
+                  produccion@mitomkt.com
                 </a>
               </li>
               <li>

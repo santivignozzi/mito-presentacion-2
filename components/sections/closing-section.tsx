@@ -66,7 +66,7 @@ export function ClosingSection() {
               </p>
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <LiquidButton asChild size="lg" variant="orange">
-                  <a href="mailto:producciones@mitomkt.com">
+                  <a href="mailto:produccion@mitomkt.com">
                     <Mail className="h-4 w-4" /> Escribir por mail
                   </a>
                 </LiquidButton>
@@ -84,8 +84,8 @@ export function ClosingSection() {
                   icon: Mail,
                   tone: "bg-mito-purple/15 text-mito-purple",
                   label: "Mail",
-                  value: "producciones@mitomkt.com",
-                  href: "mailto:producciones@mitomkt.com",
+                  value: "produccion@mitomkt.com",
+                  href: "mailto:produccion@mitomkt.com",
                 },
                 {
                   icon: MessageCircle,
